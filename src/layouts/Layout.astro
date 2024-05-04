@@ -25,9 +25,11 @@ import Footer from "../components/Footer.astro";
 	</head>
 
 	<body class="relative text-black dark:text-white">
-		<div class="background-image">
-			<Header />
-			<slot />
+		<div>
+			<Header /> 
+			<div class="flex justify-center items-center">
+				<slot />
+			</div>
 			<Footer />
 		</div>
 		<script
@@ -37,35 +39,9 @@ import Footer from "../components/Footer.astro";
 </html>
 
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
 
-	.background-image {
+
+	body {
 		background-image: linear-gradient(
 				rgba(0, 0, 0, 0.5),
 				rgba(0, 0, 0, 0.45)
