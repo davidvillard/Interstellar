@@ -1,0 +1,52 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+			rel="stylesheet"
+		/>
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+
+	<body class="relative text-black dark:text-white">
+		<div>
+			<div>
+				<slot />
+			</div>
+			<Footer />
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"
+		></script>
+	</body>
+</html>
+
+<style is:global>
+
+
+	body {
+		background-image: linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.45)
+			),
+			url("/Interstellar4K.webp");
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+</style>
