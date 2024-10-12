@@ -3,93 +3,120 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-	title="Pagina Web de Interstellar creada por davidvillard"
-	description="Fan Page de Interstellar."
+    title="Pagina Web de Interstellar creada por davidvillard"
+    description="Fan Page de Interstellar."
 >
-<div class="relative font-medium md:h-full flex items-center content-center">
-    <div class="mr-auto ml-auto w-full px-6 py-8">
-        <div class="max-w-4xl mx-auto bg-black/70 rounded-xl shadow-md overflow-hidden md:max-w-4xl">
-            <div class="md:flex">
-                <div class="md:flex-shrink-0">
-                    <img class="h-60 w-full object-cover md:h-full md:w-48" src="/interstellar.jpg" alt="Protagonista de interstellar">
-                </div>
-                <div class="p-8">
-                    <div class="uppercase tracking-wide text-4xl text-orange-400 font-bold">Hans Zimmer</div>
-                    <p class="mt-4 text-white/90">Dirigida por Christopher Nolan, Interstellar es una de las mejores películas, por no decir la mejor, del siglo XXI y del año 2014.</p>
-                    <p class="mt-2 text-white/90">Protagonizada por Matthew McConaughey, Jessica Chastain, Anne Hathaway, Timothee Chalamet y Matt Damon, Interstellar está ambientada en el futuro donde la tierra en la que vivimos ya no nos permite habitarla como antes. Por ello, un equipo de la NASA dirigido por Cooper (Matthew McConaughey) intentará encontrar un nuevo planeta habitable en un viaje interestelar.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="relative font-medium md:h-full flex items-center content-center">
-    <div class="mr-auto ml-auto w-full px-6 py-8">
-        <div class="max-w-4xl mx-auto bg-black/70 rounded-xl shadow-md overflow-hidden md:max-w-4xl">
-            <div class="md:flex">
-                <div class="p-8">
-                    <div class="flex justify-center">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="text-center">
-                                Director:
-                            </div>
-                            <div>
-                                Christopher Nolan
-                            </div>
-                            <div class="text-center">
-                                Guión: 
-                             </div>
-                             <div>
-                                Jonathan Nolan
-                            </div>
-                             <div class="text-center">
-                               Música:
-                            </div>
-                            <div>
-                                Hans Zimmer
-                            </div>
-                            <div class="text-center">
-                                Reparto: 
-                            </div>
-                            <div>
-                                Matthew McConaughey, Jessica Chastain, Anne Hathaway, Timothee Chalamet, Matt Damon
-                            </div>
-                            <div class="text-center">
-                                Estreno: 
-                            </div>
-                            <div>
-                                26 de Octubre de 2014
-                            </div>
-                            <div class="text-center">
-                                Genero:
-                            </div>
-                            <div>
-                                Ciencia Ficción, Drama, Aventura, Epica
-                            </div>
-                            <div class="text-center">
-                                Duración:
-                            </div>
-                            <div>
-                                169 minutos
-                            </div>
-                            <div class="text-center">
-                                Presupuesto:
-                            </div>
-                            <div>
-                                165 millones de dolares
-                            </div>
-                            <div class="text-center">
-                                Recaudación:
-                            </div>
-                            <div>
-                                773.897.851 USD
-                            </div>
-                        </div>
+    <section class="text-gray-400 bg-[#060a14e8] mt-16 rounded-2xl body-font">
+        <div class="container px-10 py-24 mx-auto">
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-10 ">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img
+                            alt="content"
+                            class="object-cover object-center h-full w-full"
+                            src="/about-1.webp"
+                        />
                     </div>
+                    <h2 class="text-xl font-medium title-font text-white mt-5">
+                        Ambientación Distópica y Misión Espacial
+                    </h2>
+                    <p class="text-base leading-relaxed mt-2 text-pretty">
+                        "Interstellar" se sitúa en un futuro distópico donde la
+                        Tierra enfrenta una crisis ambiental devastadora que
+                        amenaza la supervivencia de la humanidad. La trama sigue
+                        a Cooper, un ex piloto convertido en agricultor, quien
+                        se une a una misión espacial secreta para encontrar un
+                        nuevo hogar para la humanidad más allá de nuestro
+                        sistema solar. Junto con un equipo de científicos,
+                        Cooper se aventura a través de agujeros de gusano en
+                        busca de planetas potencialmente habitables.
+                    </p>
+                    <a href="https://es.wikipedia.org/wiki/Interstellar" class="text-indigo-300 hover:text-indigo-400 inline-flex items-center mt-3" target="_blank" rel="noopener noreferrer"
+                        >Leer más
+                        <svg
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            class="w-4 h-4 ml-2 mt-[3px]"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img
+                            alt="content"
+                            class="object-cover object-center h-full w-full"
+                            src="/about-2.webp"
+                        />
+                    </div>
+                    <h2 class="text-xl font-medium title-font text-white mt-5">
+                        Exploración y Descubrimientos Cósmicos
+                    </h2>
+                    <p class="text-base leading-relaxed mt-2 text-pretty">
+                        A lo largo de su odisea, el equipo de exploradores se
+                        enfrenta a peligros desconocidos, descubre mundos
+                        distantes y se enfrenta a dilemas éticos mientras luchan
+                        por salvar a la humanidad de la extinción. La película
+                        explora temas profundos como el tiempo, la gravedad y la
+                        naturaleza del universo, todo mientras los personajes se
+                        enfrentan a desafíos personales y emocionales.
+                    </p>
+                    <a href="https://es.wikipedia.org/wiki/Interstellar" class="text-indigo-300 hover:text-indigo-400 inline-flex items-center mt-3" target="_blank" rel="noopener noreferrer"
+                        >Leer más
+                        <svg
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            class="w-4 h-4 ml-2 mt-[3px]"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                    <div class="rounded-lg h-64 overflow-hidden">
+                        <img
+                            alt="content"
+                            class="object-cover object-center h-full w-full"
+                            src="/about-3.webp"
+                        />
+                    </div>
+                    <h2 class="text-xl font-medium title-font text-white mt-5">
+                        Conclusión Épica y Reflexiones Filosóficas
+                    </h2>
+                    <p class="text-base leading-relaxed mt-2">
+                        "Interstellar" culmina en una conclusión épica que
+                        desafía la mente y el corazón. A medida que la trama se
+                        desenvuelve, se plantean preguntas profundas sobre el
+                        amor, la esperanza y el sacrificio. La película invita a
+                        los espectadores a reflexionar sobre la naturaleza de la
+                        existencia humana y el papel del ser humano en el vasto
+                        cosmos.
+                    </p>
+                    <a href="https://es.wikipedia.org/wiki/Interstellar" class="text-indigo-300 hover:text-indigo-400 inline-flex items-center mt-3" target="_blank" rel="noopener noreferrer"
+                        >Leer más
+                        <svg
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            class="w-4 h-4 ml-2 mt-[3px]"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 </Layout>

@@ -1,0 +1,651 @@
+<div
+    class="bg-custom w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0"
+>
+    <div class="w-full sm:max-w-2xl p-5 mt-10 mb-20 mx-auto">
+        <h2 class="mb-16 text-center text-5xl font-extrabold leading-[3.5rem]">
+            &iexcl;Reg&iacute;strate ahora y &uacutenete a nuestra comunidad!
+        </h2>
+        <form class="flex flex-col items-center">
+            <!-- Primer Bloque -->
+            <div class="border-b-[1px] mb-8 w-[1000px] px-56">
+                <!-- Nombre y Apellidos -->
+                <div
+                    class="flex flex-col sm:flex-row sm:space-x-4 mb-4 w-[550px]"
+                >
+                    <!-- Nombre -->
+                    <div class="mb-4 sm:mb-0 w-1/2 ">
+                        <label
+                            for="UserName"
+                            class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                        >
+                            <input
+                                type="text"
+                                id="UserName"
+                                placeholder="Nombre de usuario"
+                                class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                            />
+                            <span
+                                class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                                >Nombre</span
+                            >
+                        </label>
+                    </div>
+                    <!-- Apellidos -->
+                    <div class="w-1/2">
+                        <label
+                            for="UserSurname"
+                            class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                        >
+                            <input
+                                type="text"
+                                id="UserSurname"
+                                placeholder="Apellidos"
+                                class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                            />
+                            <span
+                                class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                                >Apellidos</span
+                            >
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Genero -->
+                <div class="mb-4">
+                    <label
+                        for="UserGender"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <select
+                            id="UserGender"
+                            class="h-[45px] pl-4 w-full border-none bg-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[7px]"
+                        >
+                            <option value="M"> Masculino </option>
+                            <option value="F"> Femenino </option>
+                            <option value="O"> Otro </option>
+                            <option value="P"> Prefiero no responder </option>
+                        </select>
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >G&eacute;nero
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Pais/Region -->
+                <div class="mb-4">
+                    <label
+                        for="UserCountry"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <select
+                            id="UserCountry"
+                            class="h-[45px] w-full pl-4 border-none bg-transparent focus:border-transparent appearance-none focus:outline-none focus:ring-0 sm:text-[1.1rem] mt-[7px] font-custom"
+                        >
+                            <option value="AFG"> Afganist&#225;n </option>
+                            <option value="ALB"> Albania </option>
+                            <option value="DEU"> Alemania </option>
+                            <option value="AND"> Andorra </option>
+                            <option value="AGO"> Angola </option>
+                            <option value="AIA"> Anguila </option>
+                            <option value="ATA"> Ant&#225;rtida </option>
+                            <option value="ATG"> Antigua y Barbuda </option>
+                            <option value="SAU"> Arabia Saud&#237; </option>
+                            <option value="IOT">
+                                Archipi&#233;lago de Chagos
+                            </option>
+                            <option value="DZA"> Argelia </option>
+                            <option value="ARG"> Argentina </option>
+                            <option value="ARM"> Armenia </option>
+                            <option value="ABW"> Aruba </option>
+                            <option value="AUS"> Australia </option>
+                            <option value="AUT"> Austria </option>
+                            <option value="AZE"> Azerbaiy&#225;n </option>
+                            <option value="BHS"> Bahamas </option>
+                            <option value="BGD"> Banglad&#233;s </option>
+                            <option value="BRB"> Barbados </option>
+                            <option value="BHR"> Bar&#233;in </option>
+                            <option value="BEL"> B&#233;lgica </option>
+                            <option value="BLZ"> Belice </option>
+                            <option value="BEN"> Ben&#237;n </option>
+                            <option value="BMU"> Bermudas </option>
+                            <option value="BLR"> Bielorrusia </option>
+                            <option value="BOL"> Bolivia </option>
+                            <option value="BIH"> Bosnia y Herzegovina </option>
+                            <option value="BWA"> Botsuana </option>
+                            <option value="BRA"> Brasil </option>
+                            <option value="BRN"> Brun&#233;i </option>
+                            <option value="BGR"> Bulgaria </option>
+                            <option value="BFA"> Burkina Faso </option>
+                            <option value="BDI"> Burundi </option>
+                            <option value="BTN"> But&#225;n </option>
+                            <option value="CPV"> Cabo Verde </option>
+                            <option value="KHM"> Camboya </option>
+                            <option value="CMR"> Camer&#250;n </option>
+                            <option value="CAN"> Canad&#225; </option>
+                            <option value="BES">
+                                Caribe Neerland&#233;s
+                            </option>
+                            <option value="QAT"> Catar </option>
+                            <option value="TCD"> Chad </option>
+                            <option value="CZE"> Chequia </option>
+                            <option value="CHL"> Chile </option>
+                            <option value="CHN"> China continental </option>
+                            <option value="CYP"> Chipre </option>
+                            <option value="VAT">
+                                Ciudad&nbsp;del&nbsp;Vaticano
+                            </option>
+                            <option value="COL"> Colombia </option>
+                            <option value="COM"> Comoras </option>
+                            <option value="KOR"> Corea del Sur </option>
+                            <option value="CIV"> Costa de Marfil </option>
+                            <option value="CRI"> Costa Rica </option>
+                            <option value="HRV"> Croacia </option>
+                            <option value="CUW"> Curazao </option>
+                            <option value="DNK"> Dinamarca </option>
+                            <option value="DMA"> Dominica </option>
+                            <option value="ECU"> Ecuador </option>
+                            <option value="EGY"> Egipto </option>
+                            <option value="SLV"> El Salvador </option>
+                            <option value="ARE">
+                                Emiratos &#193;rabes Unidos
+                            </option>
+                            <option value="ERI"> Eritrea </option>
+                            <option value="SVK"> Eslovaquia </option>
+                            <option value="SVN"> Eslovenia </option>
+                            <option value="ESP"> Espa&#241;a </option>
+                            <option value="USA"> Estados Unidos </option>
+                            <option value="EST"> Estonia </option>
+                            <option value="SWZ"> Esuatini </option>
+                            <option value="ETH"> Etiop&#237;a </option>
+                            <option value="PHL"> Filipinas </option>
+                            <option value="FIN"> Finlandia </option>
+                            <option value="FJI"> Fiyi </option>
+                            <option value="FRA"> Francia </option>
+                            <option value="GAB"> Gab&#243;n </option>
+                            <option value="GMB"> Gambia </option>
+                            <option value="GEO"> Georgia </option>
+                            <option value="GHA"> Ghana </option>
+                            <option value="GIB"> Gibraltar </option>
+                            <option value="GRD"> Granada </option>
+                            <option value="GRC"> Grecia </option>
+                            <option value="GRL"> Groenlandia </option>
+                            <option value="GLP"> Guadalupe </option>
+                            <option value="GUM"> Guam </option>
+                            <option value="GTM"> Guatemala </option>
+                            <option value="GUF"> Guayana Francesa </option>
+                            <option value="GGY"> Guernsey </option>
+                            <option value="GIN"> Guinea </option>
+                            <option value="GNB"> Guinea-Bissau </option>
+                            <option value="GNQ"> Guinea Ecuatorial </option>
+                            <option value="GUY"> Guyana </option>
+                            <option value="HTI"> Hait&#237; </option>
+                            <option value="HND"> Honduras </option>
+                            <option value="HKG"> Hong Kong </option>
+                            <option value="HUN"> Hungr&#237;a </option>
+                            <option value="IND"> India </option>
+                            <option value="IDN"> Indonesia </option>
+                            <option value="IRQ"> Irak </option>
+                            <option value="IRL"> Irlanda </option>
+                            <option value="BVT"> Isla Bouvet </option>
+                            <option value="IMN"> Isla de Man </option>
+                            <option value="CXR"> Isla de Navidad </option>
+                            <option value="ISL"> Islandia </option>
+                            <option value="NFK"> Isla Norfolk </option>
+                            <option value="ALA"> Islas &#197;land </option>
+                            <option value="CYM"> Islas Caim&#225;n </option>
+                            <option value="CCK"> Islas Cocos </option>
+                            <option value="COK"> Islas Cook </option>
+                            <option value="FRO"> Islas Feroe </option>
+                            <option value="SGS">
+                                Islas Georgia del Sur y Sandwich del Sur
+                            </option>
+                            <option value="HMD">
+                                Islas Heard y McDonald
+                            </option>
+                            <option value="FLK"> Islas Malvinas </option>
+                            <option value="MNP">
+                                Islas Marianas del Norte
+                            </option>
+                            <option value="MHL"> Islas Marshall </option>
+                            <option value="UMI">
+                                Islas menores alejadas de EE.&nbsp;UU.
+                            </option>
+                            <option value="SLB"> Islas Salom&#243;n </option>
+                            <option value="TCA"> Islas Turcas y Caicos </option>
+                            <option value="VGB">
+                                Islas V&#237;rgenes Brit&#225;nicas
+                            </option>
+                            <option value="VIR">
+                                Islas V&#237;rgenes de EE. UU.
+                            </option>
+                            <option value="ISR"> Israel </option>
+                            <option value="ITA"> Italia </option>
+                            <option value="JAM"> Jamaica </option>
+                            <option value="JPN"> Jap&#243;n </option>
+                            <option value="JEY"> Jersey </option>
+                            <option value="JOR"> Jordania </option>
+
+                            <option value="KAZ"> Kazajist&#225;n </option>
+                            <option value="KEN"> Kenia </option>
+                            <option value="KGZ"> Kirguist&#225;n </option>
+                            <option value="KIR"> Kiribati </option>
+                            <option value="XKS"> Kosovo </option>
+                            <option value="KWT"> Kuwait </option>
+                            <option value="LAO"> Laos </option>
+                            <option value="LSO"> Lesoto </option>
+                            <option value="LVA"> Letonia </option>
+                            <option value="LBN"> L&#237;bano </option>
+                            <option value="LBR"> Liberia </option>
+                            <option value="LBY"> Libia </option>
+                            <option value="LIE"> Liechtenstein </option>
+                            <option value="LTU"> Lituania </option>
+                            <option value="LUX"> Luxemburgo </option>
+                            <option value="MAC"> Macao </option>
+                            <option value="MKD"> Macedonia del Norte </option>
+                            <option value="MDG"> Madagascar </option>
+                            <option value="MYS"> Malasia </option>
+                            <option value="MWI"> Malaui </option>
+                            <option value="MDV"> Maldivas </option>
+                            <option value="MLI"> Mali </option>
+                            <option value="MLT"> Malta </option>
+                            <option value="MAR"> Marruecos </option>
+                            <option value="MTQ"> Martinica </option>
+                            <option value="MUS"> Mauricio </option>
+                            <option value="MRT"> Mauritania </option>
+                            <option value="MYT"> Mayotte </option>
+                            <option value="MEX"> M&#233;xico </option>
+                            <option value="FSM"> Micronesia </option>
+                            <option value="MDA"> Moldavia </option>
+                            <option value="MCO"> M&#243;naco </option>
+                            <option value="MNG"> Mongolia </option>
+                            <option value="MNE"> Montenegro </option>
+                            <option value="MSR"> Montserrat </option>
+                            <option value="MOZ"> Mozambique </option>
+                            <option value="MMR"> Myanmar </option>
+                            <option value="NAM"> Namibia </option>
+                            <option value="NRU"> Nauru </option>
+                            <option value="NPL"> Nepal </option>
+                            <option value="NIC"> Nicaragua </option>
+                            <option value="NER"> N&#237;ger </option>
+                            <option value="NGA"> Nigeria </option>
+                            <option value="NIU"> Niue </option>
+                            <option value="NOR"> Noruega </option>
+                            <option value="NCL"> Nueva Caledonia </option>
+                            <option value="NZL"> Nueva Zelanda </option>
+                            <option value="OMN"> Om&#225;n </option>
+                            <option value="NLD"> Pa&#237;ses Bajos </option>
+                            <option value="PAK"> Pakist&#225;n </option>
+                            <option value="PLW"> Palaos </option>
+                            <option value="PAN"> Panam&#225; </option>
+                            <option value="PNG">
+                                Pap&#250;a Nueva Guinea
+                            </option>
+                            <option value="PRY"> Paraguay </option>
+                            <option value="PER"> Per&#250; </option>
+                            <option value="PCN"> Pitcairn </option>
+                            <option value="PYF"> Polinesia Francesa </option>
+                            <option value="POL"> Polonia </option>
+                            <option value="PRT"> Portugal </option>
+                            <option value="PRI"> Puerto Rico </option>
+                            <option value="GBR"> Reino Unido </option>
+                            <option value="CAF"
+                                >Rep&#250;blica Centroafricana</option
+                            >
+                            <option value="COG">Rep&#250;blica del Congo</option
+                            >
+                            <option value="COD"
+                                >Rep&#250;blica Democr&#225;tica del Congo</option
+                            >
+                            <option value="DOM"
+                                >Rep&#250;blica Dominicana</option
+                            >
+                            <option value="REU"> Reuni&#243;n </option>
+                            <option value="RWA"> Ruanda </option>
+                            <option value="ROU"> Ruman&#237;a </option>
+                            <option value="RUS"> Rusia </option>
+                            <option value="ESH">S&#225;hara Occidental</option>
+                            <option value="WSM"> Samoa </option>
+                            <option value="ASM">Samoa Americana</option>
+                            <option value="BLM"> San Bartolom&#233; </option>
+                            <option value="KNA"
+                                >San Crist&#243;bal y Nieves</option
+                            >
+                            <option value="SMR"> San Marino </option>
+                            <option value="MAF"> San Mart&#237;n </option>
+                            <option value="SPM"
+                                >San Pedro y Miquel&#243;n</option
+                            >
+                            <option value="SHN"> Santa Elena </option>
+                            <option value="LCA"> Santa Luc&#237;a </option>
+                            <option value="STP"
+                                >Santo Tom&#233; y Pr&#237;ncipe</option
+                            >
+                            <option value="VCT"
+                                >San Vicente y las Granadinas</option
+                            >
+                            <option value="SEN"> Senegal </option>
+                            <option value="SRB"> Serbia </option>
+                            <option value="SYC"> Seychelles </option>
+                            <option value="SLE"> Sierra Leona </option>
+                            <option value="SGP"> Singapur </option>
+                            <option value="SXM"> Sint Maarten </option>
+                            <option value="SOM"> Somalia </option>
+                            <option value="LKA"> Sri Lanka </option>
+                            <option value="ZAF"> Sud&#225;frica </option>
+                            <option value="SDN"> Sud&#225;n </option>
+                            <option value="SSD"> Sud&#225;n del Sur </option>
+                            <option value="SWE"> Suecia </option>
+                            <option value="CHE"> Suiza </option>
+                            <option value="SUR"> Surinam </option>
+                            <option value="SJM">Svalbard y Jan Mayen</option>
+                            <option value="THA"> Tailandia </option>
+                            <option value="TWN"> Taiw&#225;n </option>
+                            <option value="TZA"> Tanzania </option>
+                            <option value="TJK"> Tayikist&#225;n </option>
+                            <option value="ATF"
+                                >Territorios Australes Franceses</option
+                            >
+                            <option value="PSE">Territorios Palestinos</option>
+                            <option value="TLS"> Timor Oriental </option>
+                            <option value="TGO"> Togo </option>
+                            <option value="TKL"> Tokelau </option>
+                            <option value="TON"> Tonga </option>
+                            <option value="TTO">Trinidad y Tobago</option>
+                            <option value="TUN"> T&#250;nez </option>
+                            <option value="TKM"> Turkmenist&#225;n </option>
+                            <option value="TUR"> Turqu&#237;a </option>
+                            <option value="TUV"> Tuvalu </option>
+                            <option value="UKR"> Ucrania </option>
+                            <option value="UGA"> Uganda </option>
+                            <option value="URY"> Uruguay </option>
+                            <option value="UZB"> Uzbekist&#225;n </option>
+                            <option value="VUT"> Vanuatu </option>
+                            <option value="VEN"> Venezuela </option>
+                            <option value="VNM"> Vietnam </option>
+                            <option value="WLF">Wallis y Futuna</option>
+                            <option value="YEM"> Yemen </option>
+                            <option value="DJI"> Yibuti </option>
+                            <option value="ZMB"> Zambia </option>
+                            <option value="ZWE"> Zimbabue </option>
+                        </select>
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >Pais o Regi&oacute;n
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Fecha de nacimiento -->
+                <div class="mb-8">
+                    <label
+                        for="UserBirthdate"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <input
+                            type="date"
+                            id="UserBirthdate"
+                            placeholder="Fecha de nacimiento"
+                            class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                        />
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >Fecha de nacimiento</span
+                        >
+                    </label>
+                </div>
+            </div>
+
+            <!-- Segundo Bloque -->
+            <div class="border-b-[1px] mb-8 w-[1000px] px-56">
+                <!-- Correo -->
+                <div class="mb-4">
+                    <label
+                        for="UserEmail"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <input
+                            type="email"
+                            id="UserEmail"
+                            placeholder="nombre@example.com"
+                            class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                        />
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >nombre@example.com</span
+                        >
+                    </label>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="mb-4">
+                    <label
+                        for="UserPassword"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <input
+                            type="password"
+                            id="UserPassword"
+                            placeholder="Password"
+                            class="peer h-[45px] w-full pl-4 border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                        />
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >Contrase&ntilde;a</span
+                        >
+                    </label>
+                </div>
+
+                <!-- Confirmar Contraseña -->
+                <div class="mb-8">
+                    <label
+                        for="UserPasswordConfirm"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <input
+                            type="password"
+                            id="UserPasswordConfirm"
+                            placeholder="Password"
+                            class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                        />
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >Confirmar contrase&ntilde;a</span
+                        >
+                    </label>
+                </div>
+            </div>
+
+            <!-- Tercer Bloque -->
+            <div class="border-b-[1px] mb-8 w-[1000px] px-56">
+                <!-- Telefono -->
+                <div class="mb-4">
+                    <label
+                        for="UserPhone"
+                        class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                    >
+                        <input
+                            type="tel"
+                            id="UserPhone"
+                            placeholder="N&uacute;mero de tel&eacute;fono"
+                            class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+                        />
+                        <span
+                            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+                            >N&uacute;mero de tel&eacute;fono</span
+                        >
+                    </label>
+                </div>
+
+                <!-- Comprobacion Numero de Telefono -->
+                <div class="mb-8">
+                    <div class="flex items-center pl-7 text-base font-normal">
+                        Verificar con:
+                        <label
+                            class="relative flex cursor-pointer items-center rounded-full ml-6"
+                            for="radio-sms"
+                            data-ripple-dark="true"
+                        >
+                            <input
+                                type="radio"
+                                class="before:content[''] peer pl-4 relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-red-500 checked:bg-red-500 checked:before:bg-red-500 hover:before:opacity-10"
+                                id="radio-sms"
+                                name="verification_method"
+                                value="SMS"
+                            />
+                            <div
+                                class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-3.5 w-3.5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    stroke="currentColor"
+                                    stroke-width="1"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </label>
+                        <label
+                            for="radio-sms"
+                            class="ml-1 text-base leading-5 text-gray-900"
+                            >SMS</label
+                        >
+
+                        <label
+                            class="relative flex cursor-pointer items-center rounded-full ml-4"
+                            for="radio-email"
+                            data-ripple-dark="true"
+                        >
+                            <input
+                                type="radio"
+                                class="before:content[''] peer pl-4 relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-red-500 checked:bg-red-500 checked:before:bg-red-500 hover:before:opacity-10"
+                                id="radio-email"
+                                name="verification_method"
+                                value="Correo"
+                            />
+                            <div
+                                class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-3.5 w-3.5"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    stroke="currentColor"
+                                    stroke-width="1"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                        </label>
+                        <label
+                            for="radio-email"
+                            class="ml-1 text-base leading-5 text-gray-900"
+                            >Correo Electr&oacute;nico</label
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="mb-4">
+                <label
+                    for="UserAvatar"
+                    class="relative block overflow-hidden w-[550px] rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-red-600 focus-within:ring-1 focus-within:ring-red-600"
+                >
+                    <input
+                        type="file"
+                        id="UserAvatar"
+                        placeholder="Avatar"
+                        class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[30px]"
+                    />
+                    <span
+                        class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-500 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm"
+                        >Avatar</span
+                    >
+                </label>
+            </div>
+
+            <!-- Terminos y condiciones -->
+            <div class="mb-4">
+                <div class="flex items-center">
+                    <label
+                        class="relative flex cursor-pointer items-center rounded-full"
+                        for="checkbox-2"
+                        data-ripple-dark="true"
+                    >
+                        <input
+                            type="checkbox"
+                            class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-red-500 checked:bg-red-500 checked:before:bg-red-500 hover:before:opacity-10"
+                            id="checkbox-2"
+                        />
+                        <div
+                            class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-3.5 w-3.5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="1"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </label>
+                    <label
+                        for="remember_me"
+                        class="ml-2 block text-sm leading-5 text-gray-900 font-custom"
+                        >Acepto los <a href="/terms/" class="underline"
+                            >t&eacute;rminos y condiciones</a
+                        ></label
+                    >
+                </div>
+            </div>
+
+            <!-- Boton de registro -->
+            <div class="mt-6 w-80">
+                <button
+                    class="w-full inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold capitalize text-white hover:bg-red-700 active:bg-red-700 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 disabled:opacity-25 transition"
+                    >Registrarse</button
+                >
+            </div>
+
+            <!-- Iniciar sesion -->
+            <div class="mt-6 text-center">
+                <p class="font-custom">
+                    Ya tienes una cuenta? <a
+                        href="/login/"
+                        class="underline font-custom"
+                        >Incia sesi&oacute;n ahora</a
+                    >
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<style is:global>
+
+
+	.bg-custom {
+		background-image:
+			url("/bg-abstract.webp");
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+</style>
