@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Pagina Web de Interstellar creada por davidvillard"
+    description="Fan Page de Interstellar."
+>
+
+<div class="grid grid-cols-1 2xl:grid-cols-3 gap-10 mt-10 px-10 py-20 w-[80%] bg-[#060a14e8] rounded-3xl">
+    <!-- Imagen del actor a la izquierda -->
+    <div class="col-span-1 flex justify-center 2xl:justify-start">
+      <img src="/anne.png" alt="Imagen de Anne Hathaway" class="2xl:w-[48rem] 2xl:h-[32rem] w-[30rem] h-[20rem] object-cover rounded-lg mask-blur-bottom ml-16 md:ml-20 2xl:ml-0">
+    </div>
+    
+    <!-- Información del actor a la derecha -->
+    <div class="col-span-2 md:pl-4">
+      <h2 class="text-4xl font-bold text-center 2xl:text-left tracking-[0.25em]">ANNE HATHAWAY</h2>
+      <h4 class="tracking-[0.2em] text-sm text-center 2xl:text-left text-slate-400 mt-10">CHARACTER:</h4>
+      <h3 class="tracking-[0.1em] text-lg text-center 2xl:text-left font-bold">AMELIA BRAND</h3>
+      <p class="mt-16 leading-relaxed text-center 2xl:text-left text-wrap 2xl:w-[85%]">
+        Anne Hathaway, interpretando a Amelia Brand, es una astronauta y científica que acompaña a Cooper en la misión. Hija del Dr. Brand, Amelia es una mujer decidida y competente, con una creencia profunda en el poder del amor, no solo como un sentimiento, sino como una fuerza que puede trascender el tiempo y el espacio. Hathaway interpreta a una persona que lucha con la dicotomía entre la razón y la emoción. Mientras su personaje trata de mantener una perspectiva lógica y científica, sus sentimientos personales la llevan a tomar decisiones difíciles a lo largo de la misión. 
+                A través de su actuación, Hathaway logra transmitir el conflicto interno de Amelia, quien busca un equilibrio entre salvar a la humanidad y seguir su corazón.
+      </p>
+      <h4 class="tracking-[0.2em] text-sm text-slate-400 mt-16">PHOTOS:</h4>
+      <!-- Imágenes de la película en tamaño mediano -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-6">
+        <img src="/anne-bio-1.jpg" alt="Imagen 1" class="w-full h-auto object-cover rounded-xl transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+        <img src="/anne-bio-2.jpg" alt="Imagen 2" class="w-full h-auto object-cover rounded-xl transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+        <img src="/anne-bio-3.jpg" alt="Imagen 3" class="w-full h-auto object-cover rounded-xl transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+      </div>
+    </div>
+  </div>
+</Layout>
+
+
+<style>
+    .mask-blur-bottom {
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0,1), 85%, rgba(0, 0, 0, 0));
+}
+</style>
