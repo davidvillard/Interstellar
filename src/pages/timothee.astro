@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Pagina Web de Interstellar creada por davidvillard"
+    description="Fan Page de Interstellar."
+>
+
+<div class="grid grid-cols-1 2xl:grid-cols-3 gap-10 mt-10 2xl:px-10 py-20 w-[80%] bg-[#060a14e8] rounded-3xl">
+    <!-- Imagen del actor a la izquierda -->
+    <div class="col-span-1 flex justify-center 2xl:justify-start">
+        <img src="/timothee.png" alt="Imagen de Timothee Chalamet" class="2xl:w-[44rem] 2xl:h-[34rem] md:w-[30rem] md:h-[38rem] w-[20rem] h-[30rem] object-cover rounded-full mask-blur-bottom ml-12 md:ml-20 2xl:ml-0">
+      </div>
+    
+    <!-- Información del actor a la derecha -->
+    <div class="col-span-2 md:pl-4">
+      <h2 class="text-4xl font-bold text-center 2xl:text-left tracking-[0.25em] 2xl:px-10 px-5">TIMOTHEE CHALAMET</h2>
+      <h4 class="tracking-[0.2em] text-sm text-center 2xl:text-left text-slate-400 mt-10 2xl:px-10">CHARACTER:</h4>
+      <h3 class="tracking-[0.1em] text-lg text-center 2xl:text-left font-bold 2xl:px-10">TOM COOPER</h3>
+      <p class="mt-16 leading-relaxed text-center 2xl:text-left text-wrap 2xl:w-[85%] px-10">
+        Timothée Chalamet, interpretando a Tom Cooper (joven), encarna al hijo de Joseph Cooper. Su personaje representa el lado más vulnerable y emocional de la vida de Cooper antes de que este parta en su misión interestelar. Tom es un joven que, aunque ama profundamente a su padre, lucha por comprender por qué debe dejar a la familia para irse a las estrellas. La distancia entre ellos aumenta con el paso del tiempo, lo que genera una compleja dinámica familiar. Chalamet, en su actuación, logra transmitir la mezcla de cariño, confusión y resentimiento que define la juventud de Tom. Más adelante, el personaje adulto de Tom es interpretado por Casey Affleck, quien aporta una visión más endurecida y distante del mismo personaje, que ha pasado por los efectos devastadores de la misión de su padre.
+      </p>
+      <h4 class="tracking-[0.2em] text-sm text-slate-400 mt-16 px-10">PHOTOS:</h4>
+      <!-- Imágenes de la película en tamaño mediano -->
+      <div class="grid grid-cols-1 xl:grid-cols-4 gap-10 mt-6 px-10">
+        <img src="/timothee-bio-1.jpg" alt="Imagen 1" class="w-full h-auto object-cover rounded-xl transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+      </div>
+    </div>
+  </div>
+</Layout>
+
+
+<style>
+    .mask-blur-bottom {
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0,1), 85%, rgba(0, 0, 0, 0));
+}
+</style>
