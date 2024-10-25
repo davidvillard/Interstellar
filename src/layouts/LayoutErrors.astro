@@ -23,7 +23,7 @@ import Footer from "../components/Footer.astro";
 		<title>{title}</title>
 	</head>
 
-	<body class="relative text-black dark:text-white">
+	<body class="relative text-black dark:text-white bg-black">
 		<div>
 			<div>
 				<slot />
@@ -36,17 +36,3 @@ import Footer from "../components/Footer.astro";
 	</body>
 </html>
 
-<style is:global>
-
-
-	body {
-		background-image: linear-gradient(
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.45)
-			),
-			url("/Interstellar4K.webp");
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-	}
-</style>
