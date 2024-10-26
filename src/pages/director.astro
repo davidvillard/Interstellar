@@ -2,21 +2,126 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Pagina Web de Interstellar creada por davidvillard"
+<Layout title="Pagina Web de Interstellar creada por David Villard"
 description="Fan Page de Interstellar.">
-    
-<div class="p-8 sm:p-24 bg-[#060a14e8] mt-32 mb-28 w-[80%] rounded-3xl">
-	<div class="flex flex-col space-y-4 xl:space-y-0 xl:space-x-6 xl:flex-row">
-		<img src="/hans_zimmer.jpg" alt="" class="self-center xl:-ml-10 xl:mr-10 flex-shrink-0 w-80 h-80 mt-14 rounded-full xl:justify-self-start">
-		<div class="flex flex-col">
-			<h4 class="text-4xl font-bold text-center xl:text-left text-white">Hans Zimmer</h4>
-			<p class="text-gray-400 mt-10 text-pretty">Hans Zimmer es uno de los compositores más influyentes y exitosos de la industria cinematográfica. Nacido en Alemania en 1957, Zimmer ha dejado una marca indeleble en el mundo del cine con su música innovadora y emocional. Es conocido por su habilidad para fusionar elementos de diferentes géneros musicales, creando paisajes sonoros únicos que complementan perfectamente las imágenes en la pantalla.</p>
+    <section class="bg-[#060a14e8] mt-8 mb-20 rounded-xl w-3/4 text-white py-12 px-6">
+        <h1 class="text-4xl font-bold text-center mb-4">Christopher Nolan</h1>
+        <div class="flex flex-col md:flex-row items-center justify-center mb-40 mt-20 gap-32">
+            <img src="/christopher_nolan.png" alt="Christopher Nolan" class="rounded-full shadow-lg h-[10rem] md:h-[30rem] md:w-auto w-auto object-cover" />
+            <div class="mt-6 md:mt-0 md:ml-8 max-w-md">
+                <p class="text-lg">
+                    Christopher Nolan es un cineasta visionario conocido por sus narrativas complejas y sus impresionantes visuales. Aporta una perspectiva única a la ciencia ficción, particularmente en Interstellar.
+                </p>
+                <p class="text-gray-400 mt-4">
+                    Con una carrera que abarca más de dos décadas, Nolan ha cautivado al público con su narrativa innovadora y su magistral dirección. Sus películas a menudo exploran temas de tiempo, memoria y emoción humana, lo que lo convierte en uno de los directores más influyentes de nuestro tiempo.
+                </p>
+            </div>
+        </div>
+        
+        <h2 class="text-3xl font-bold text-center mb-16">Filmografía</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <a href="https://www.imdb.com/title/tt15398776/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/oppenheimer.jpg" alt="Oppenheimer" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Oppenheimer</h4>
+                    <p>2023</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt6723592/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/tenet.jpg" alt="Tenet" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Tenet</h4>
+                    <p>2020</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt5013056/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/dunkirk.jpg" alt="Dunkirk" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Dunkirk</h4>
+                    <p>2017</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0816692/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/Interstellar4K.webp" alt="Interstellar" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Interstellar</h4>
+                    <p>2014</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt1375666/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/inception.jpg" alt="Inception" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Inception</h4>
+                    <p>2010</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0468569/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/the-dark-knight.jpg" alt="The Dark Knight" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">The Dark Knight</h4>
+                    <p>2008</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0372784/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/batman-begins.jpg" alt="Batman Begins" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Batman Begins</h4>
+                    <p>2005</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0482571/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/the-prestige.jpg" alt="The Prestige" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">The Prestige</h4>
+                    <p>2006</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0209144/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/memento.jpg" alt="Memento" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Memento</h4>
+                    <p>2000</p>
+                </div>
+            </a>
+            <a href="https://www.imdb.com/title/tt0154506/" target="_blank" class="overflow-hidden rounded-lg shadow-lg bg-gray-800 transition-transform transform hover:scale-105">
+                <img src="/following.png" alt="Following" class="w-full h-48 object-cover rounded-t-lg" />
+                <div class="p-4">
+                    <h4 class="font-bold">Following</h4>
+                    <p>1998</p>
+                </div>
+            </a>
+        </div>
 
-			<p class="text-gray-400 mt-10 text-pretty">Su asociación con el director Christopher Nolan ha producido algunas de las colaboraciones más memorables en la historia del cine. En películas como "Inception" y "The Dark Knight Trilogy", Zimmer ha demostrado su capacidad para capturar la esencia de las historias de Nolan a través de su música. Sin embargo, es en "Interstellar" donde su colaboración alcanza nuevas alturas.</p>
-
-			<p class="text-gray-400 mt-10 text-pretty">En "Interstellar", Zimmer crea una partitura magistral que refleja la vastedad y la belleza del espacio, así como las complejas emociones de los personajes. Utilizando una combinación de instrumentos clásicos y electrónicos, Zimmer logra evocar un sentido de asombro, misterio y esperanza a lo largo de la película. Desde los momentos de quietud contemplativa hasta las escenas de acción intensa, su música se convierte en una parte integral de la experiencia cinematográfica, elevando cada momento a nuevas alturas emocionales.</p>
-		</div>
-	</div>
-</div>
-
+        <!-- Modern Awards Section -->
+        <h2 class="text-3xl font-bold text-center mt-32 mb-16">Premios y reconocimientos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-gray-800 rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105 flex items-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center">
+                    <img src="/oscar.png" alt="Oscar Icon" class="w-10 h-10" />
+                </div>
+                <div class="ml-4">
+                    <h4 class="font-bold">3 Academy Awards</h4>
+                    <p class="text-gray-400">Reconocimiento en varias categorías</p>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105 flex items-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center">
+                    <img src="/bafta.png" alt="BAFTA Icon" class="w-10 h-10" />
+                </div>
+                <div class="ml-4">
+                    <h4 class="font-bold">BAFTA Awards</h4>
+                    <p class="text-gray-400">Premios de la Academia Británica</p>
+                </div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105 flex items-center">
+                <div class="w-16 h-16 rounded-full flex items-center justify-center">
+                    <img src="/golden-globe.png" alt="Golden Globe Icon" class="w-10 h-10" />
+                </div>
+                <div class="ml-4">
+                    <h4 class="font-bold">Golden Globe Awards</h4>
+                    <p class="text-gray-400">Premios Globo de Oro</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </Layout>
