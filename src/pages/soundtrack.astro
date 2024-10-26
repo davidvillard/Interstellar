@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Interstellar" description="Interstellar Fan Page">
+  <section class="bg-[#060a14e8] mt-8 rounded-xl w-3/4 text-white py-12 px-14">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-gray-100 mb-4">Hans Zimmer</h2>
+      <p class="text-gray-400 text-lg">La banda sonora de Hans Zimmer para <i>Interstellar</i> es una obra maestra que refleja la inmensidad del espacio y la profundidad emocional de la película.</p>
+    </div>
+
+    <div class="flex flex-col justify-center md:flex-row items-center mb-12">
+      <img src="/hans_zimmer.png" alt="Hans Zimmer" class="rounded-full w-auto h-[12rem] sm:h-[20rem] object-cover mb-6 md:mb-0 md:mr-6">
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="https://open.spotify.com/intl-es/track/22DrklH5ugy3HZzSaOoe7H" target="_blank" class="bg-gray-800 rounded-lg p-4 shadow-lg hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer hover:bg-blue-600">
+        <h4 class="text-xl font-bold mb-2">Main Theme</h4>
+        <p class="text-gray-400">El icónico tema principal, capturando la esencia de la exploración.</p>
+      </a>
+      <a href="https://open.spotify.com/intl-es/track/6GUq9y0Iy5QrAuPYxTrFp2" target="_blank" class="bg-gray-800 rounded-lg p-4 shadow-lg hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer hover:bg-blue-600">
+        <h4 class="text-xl font-bold mb-2">Stay</h4>
+        <p class="text-gray-400">Una pieza conmovedora que encarna el núcleo emocional de la película.</p>
+      </a>
+      <a href="https://open.spotify.com/intl-es/track/0Sg3UL7f40ulmTh0Xwr6qY" target="_blank" class="bg-gray-800 rounded-lg p-4 shadow-lg hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer hover:bg-blue-600">
+        <h4 class="text-xl font-bold mb-2">Mountains</h4>
+        <p class="text-gray-400">Una pista poderosa, sincronizada con el tic-tac de los segundos de la vida.</p>
+      </a>
+      <a href="https://open.spotify.com/intl-es/track/5aaXqH8rgKZxg61HjECldi" target="_blank" class="bg-gray-800 rounded-lg p-4 shadow-lg hover:scale-105 transition-all ease-in-out duration-500 cursor-pointer hover:bg-blue-600">
+        <h4 class="text-xl font-bold mb-2">No Time for Caution</h4>
+        <p class="text-gray-400">Una composición épica que lleva al oyente a través del espacio y el tiempo.</p>
+      </a>
+      <!-- Agrega más tarjetas de pistas aquí -->
+    </div>
+
+    <!-- Enlaces para Escuchar -->
+    <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 w-fit gap-8 mx-auto">
+        <a href="https://open.spotify.com/intl-es/album/3B61kSKTxlY36cYgzvf3cP" target="_blank" class="bg-[#1DB954] hover:bg-[#1db954d0] transition-colors duration-300 lg:py-2 py-4 px-6 rounded-lg text-white text-center font-semibold">Escuchar en Spotify</a>
+        <a href="https://music.apple.com/us/album/interstellar-original-motion-picture-soundtrack-expanded/1533983552" target="_blank" class="bg-[#fc3c44] hover:bg-[#fc3c42cc] transition-colors duration-300 lg:py-2 py-4 px-6 rounded-lg text-white text-center font-semibold">Escuchar en Apple Music</a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mDWtgeNF9LzujhjNi5DFcX-Lld0_ZMr_s" target="_blank" class="bg-red-600 hover:bg-red-700 transition-colors duration-300 lg:py-2 py-4 px-6 rounded-lg text-white text-center font-semibold">Escuchar en YouTube</a>
+    </div>
+  </section>
+</Layout>
