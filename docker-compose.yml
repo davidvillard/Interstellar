@@ -1,0 +1,12 @@
+version: '3'
+services:
+  interstellar-astro-app:
+    build: .
+    ports:
+      - "4321:4321"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm run dev -- --host
