@@ -19,7 +19,7 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 ---
 
-### Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto está pensado como una página de fans de la película _Interstellar_, con secciones sobre la película, el director, los actores, la banda sonora, y más. La página permite a los usuarios registrarse, iniciar sesión y acceder a contenido exclusivo.
 
