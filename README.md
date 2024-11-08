@@ -6,7 +6,6 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 <br>
 <br>
-<br>
 
 ## Tabla de Contenidos
 
@@ -21,7 +20,6 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 <br>
 <br>
-<br>
 
 ## Descripción del Proyecto
 
@@ -29,7 +27,6 @@ Este proyecto está pensado como una página de fans de la película _Interstell
 
 El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y Express se encarga de manejar las solicitudes y la lógica de autenticación.
 
-<br>
 <br>
 <br>
 
@@ -43,7 +40,6 @@ El backend permite autenticación básica, mientras que el frontend está diseñ
 - **Axios**: Para manejar solicitudes HTTP en el frontend y comunicarlo con el backend.
 - **Docker**: Para la configuración y despliegue del proyecto en entornos aislados.
 
-<br>
 <br>
 <br>
 
