@@ -4,7 +4,9 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 ![100shots_so](https://github.com/davidvillard/Interstellar/blob/main/public/github/Interstellar-Github.png)
 
-
+<br>
+<br>
+<br>
 
 ## Tabla de Contenidos
 
@@ -17,7 +19,9 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 
-
+<br>
+<br>
+<br>
 
 ## Descripción del Proyecto
 
@@ -110,6 +114,9 @@ El proyecto tiene la siguiente estructura de archivos y carpetas:
     └── tailwind.config.mjs
     └── tsconfig.json
 ```
+<br>
+<br>
+<br>
 
 # Instalación y Configuración
 
@@ -118,6 +125,8 @@ El proyecto tiene la siguiente estructura de archivos y carpetas:
 - **Node.js** y **npm** deben estar instalados en tu sistema.
 - **Docker** (para un entorno aislado y fácil de desplegar).
 - **phpMyAdmin** para la gestión de la base de datos en MySQL.
+
+<br>
 
 ## Instalación
 
@@ -162,6 +171,8 @@ Accede a la aplicación en `http://localhost:4321`.
 
 # Funcionalidades
 
+<br>
+
 ## Funcionalidades del Proyecto
 
 - **Registro e Inicio de Sesión**: Los usuarios pueden registrarse e iniciar sesión. La autenticación se maneja en el backend usando **Express** y **Express-Session**.
@@ -181,15 +192,21 @@ Accede a la aplicación en `http://localhost:4321`.
 
 # Ejemplos de Uso
 
+<br>
+
 ## Registro de Usuario
 
 - Los usuarios pueden registrarse ingresando datos como nombre, correo electrónico, y contraseña.
 - La contraseña es protegida con _bcrypt_ para mayor seguridad.
 
+<br>
+
 ## Inicio de Sesión
 
 - Después de registrarse, los usuarios pueden iniciar sesión y acceder a contenido exclusivo.
 - La autenticación se maneja a través de sesiones de Express.
+
+<br>
 
 ## Consulta de la Base de Datos
 
