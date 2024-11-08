@@ -2,7 +2,7 @@
 
 Bienvenido al repositorio de **Interstellar**, una página web creada como tributo a la película _Interstellar_. Este proyecto está construido en **Astro** y utiliza diversas tecnologías en su stack, incluyendo **JavaScript**, **phpMyAdmin** para la gestión de bases de datos, **Express** para el backend, y **Tailwind CSS** para el diseño y estilo.
 
-![100shots_so](https://raw.githubusercontent.com/davidvillard/interstellar/public/github/Interstellar-Github.png)
+![100shots_so](https://github.com/davidvillard/Interstellar/blob/main/public/github/Interstellar-Github.png)
 
 ---
 
