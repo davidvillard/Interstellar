@@ -4,7 +4,7 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 ![100shots_so](https://github.com/davidvillard/Interstellar/blob/main/public/github/Interstellar-Github.png)
 
----
+
 
 ## Tabla de Contenidos
 
@@ -17,7 +17,7 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 
----
+
 
 ## Descripción del Proyecto
 
@@ -25,7 +25,7 @@ Este proyecto está pensado como una página de fans de la película _Interstell
 
 El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y Express se encarga de manejar las solicitudes y la lógica de autenticación.
 
----
+
 
 ## Tecnologías Utilizadas
 
@@ -37,7 +37,7 @@ El backend permite autenticación básica, mientras que el frontend está diseñ
 - **Axios**: Para manejar solicitudes HTTP en el frontend y comunicarlo con el backend.
 - **Docker**: Para la configuración y despliegue del proyecto en entornos aislados.
 
----
+
 
 ## Estructura del Proyecto
 
@@ -152,7 +152,7 @@ npm run dev
 
 Accede a la aplicación en `http://localhost:4321`.
 
----
+
 
 # Funcionalidades
 
@@ -169,7 +169,7 @@ Accede a la aplicación en `http://localhost:4321`.
 - **Sistema de Streaming**: Información sobre las plataformas donde se puede ver _Interstellar_.
 - **Contenido Exclusivo**: Acceso a contenido exclusivo para usuarios registrados, como entrevistas y materiales especiales.
 
----
+
 
 # Ejemplos de Uso
 
@@ -187,7 +187,7 @@ Accede a la aplicación en `http://localhost:4321`.
 
 - Puedes gestionar y consultar los datos del usuario usando **phpMyAdmin** accediendo a `http://localhost:3306`.
 
----
+
 
 # Contribuciones
 
@@ -214,7 +214,7 @@ Las contribuciones son bienvenidas. Si tienes sugerencias de nuevas funcionalida
 
 5. Abre un _pull request_ para revisión.
 
----
+
 
 # Licencia
 
