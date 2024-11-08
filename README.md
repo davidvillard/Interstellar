@@ -25,7 +25,9 @@ Este proyecto está pensado como una página de fans de la película _Interstell
 
 El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y Express se encarga de manejar las solicitudes y la lógica de autenticación.
 
-
+<br>
+<br>
+<br>
 
 ## Tecnologías Utilizadas
 
@@ -37,7 +39,9 @@ El backend permite autenticación básica, mientras que el frontend está diseñ
 - **Axios**: Para manejar solicitudes HTTP en el frontend y comunicarlo con el backend.
 - **Docker**: Para la configuración y despliegue del proyecto en entornos aislados.
 
-
+<br>
+<br>
+<br>
 
 ## Estructura del Proyecto
 
@@ -152,7 +156,9 @@ npm run dev
 
 Accede a la aplicación en `http://localhost:4321`.
 
-
+<br>
+<br>
+<br>
 
 # Funcionalidades
 
@@ -169,7 +175,9 @@ Accede a la aplicación en `http://localhost:4321`.
 - **Sistema de Streaming**: Información sobre las plataformas donde se puede ver _Interstellar_.
 - **Contenido Exclusivo**: Acceso a contenido exclusivo para usuarios registrados, como entrevistas y materiales especiales.
 
-
+<br>
+<br>
+<br>
 
 # Ejemplos de Uso
 
@@ -187,7 +195,9 @@ Accede a la aplicación en `http://localhost:4321`.
 
 - Puedes gestionar y consultar los datos del usuario usando **phpMyAdmin** accediendo a `http://localhost:3306`.
 
-
+<br>
+<br>
+<br>
 
 # Contribuciones
 
@@ -214,7 +224,9 @@ Las contribuciones son bienvenidas. Si tienes sugerencias de nuevas funcionalida
 
 5. Abre un _pull request_ para revisión.
 
-
+<br>
+<br>
+<br>
 
 # Licencia
 
