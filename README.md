@@ -51,66 +51,22 @@ El proyecto tiene la siguiente estructura de archivos y carpetas:
 
 ```plaintext
 └── 📁Interstellar
-    └── 📁.astro
-        └── settings.json
-        └── types.d.ts
     └── 📁backend
         └── 📁config
-            └── db.js
         └── 📁Controllers
-            └── authController.js
         └── 📁Middleware
-            └── uploadAvatar.js
         └── 📁Routes
-            └── authRoutes.js
         └── 📁Uploads
-        └── .env
-        └── app.js
-        └── package-lock.json
-        └── package.json
     └── 📁public
     └── 📁src
         └── 📁components
             └── 📁Icons
-            └── Card.astro
-            └── Footer.astro
-            └── Header.astro
         └── 📁layouts
-            └── Layout.astro
-            └── LayoutErrors.astro
-            └── LayoutLogin.astro
-            └── LayoutRegister.astro
         └── 📁pages
-            └── 404.astro
-            └── about.astro
-            └── amelia.astro
-            └── cast.astro
-            └── cooper.astro
-            └── director.astro
-            └── hugh-mann.astro
-            └── index.astro
-            └── john.astro
-            └── login.astro
-            └── media.astro
-            └── murph.astro
-            └── register.astro
-            └── soundtrack.astro
-            └── streaming.astro
-            └── timothee.astro
-        └── 📁services
-            └── api.js
-            └── login.js
-            └── register.js
+        └── 📁servicess
         └── env.d.ts
-    └── .gitignore
-    └── astro.config.mjs
     └── docker-compose.yml
     └── Dockerfile
-    └── package-lock.json
-    └── package.json
-    └── README.md
-    └── tailwind.config.mjs
-    └── tsconfig.json
 ```
 <br>
 <br>
