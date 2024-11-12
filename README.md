@@ -2,9 +2,12 @@
 
 Bienvenido al repositorio de **Interstellar**, una página web creada como tributo a la película _Interstellar_. Este proyecto está construido en **Astro** y utiliza diversas tecnologías en su stack, incluyendo **JavaScript**, **phpMyAdmin** para la gestión de bases de datos, **Express** para el backend, y **Tailwind CSS** para el diseño y estilo.
 
+<br>
+
 ![100shots_so](https://github.com/davidvillard/Interstellar/blob/main/public/github/Interstellar-Github.png)
 
----
+<br>
+<br>
 
 ## Tabla de Contenidos
 
@@ -17,7 +20,8 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 
----
+<br>
+<br>
 
 ## Descripción del Proyecto
 
@@ -25,7 +29,8 @@ Este proyecto está pensado como una página de fans de la película _Interstell
 
 El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y Express se encarga de manejar las solicitudes y la lógica de autenticación.
 
----
+<br>
+<br>
 
 ## Tecnologías Utilizadas
 
@@ -37,7 +42,8 @@ El backend permite autenticación básica, mientras que el frontend está diseñ
 - **Axios**: Para manejar solicitudes HTTP en el frontend y comunicarlo con el backend.
 - **Docker**: Para la configuración y despliegue del proyecto en entornos aislados.
 
----
+<br>
+<br>
 
 ## Estructura del Proyecto
 
@@ -106,6 +112,9 @@ El proyecto tiene la siguiente estructura de archivos y carpetas:
     └── tailwind.config.mjs
     └── tsconfig.json
 ```
+<br>
+<br>
+<br>
 
 # Instalación y Configuración
 
@@ -114,6 +123,8 @@ El proyecto tiene la siguiente estructura de archivos y carpetas:
 - **Node.js** y **npm** deben estar instalados en tu sistema.
 - **Docker** (para un entorno aislado y fácil de desplegar).
 - **phpMyAdmin** para la gestión de la base de datos en MySQL.
+
+<br>
 
 ## Instalación
 
@@ -152,9 +163,13 @@ npm run dev
 
 Accede a la aplicación en `http://localhost:4321`.
 
----
+<br>
+<br>
+<br>
 
 # Funcionalidades
+
+<br>
 
 ## Funcionalidades del Proyecto
 
@@ -169,25 +184,35 @@ Accede a la aplicación en `http://localhost:4321`.
 - **Sistema de Streaming**: Información sobre las plataformas donde se puede ver _Interstellar_.
 - **Contenido Exclusivo**: Acceso a contenido exclusivo para usuarios registrados, como entrevistas y materiales especiales.
 
----
+<br>
+<br>
+<br>
 
 # Ejemplos de Uso
+
+<br>
 
 ## Registro de Usuario
 
 - Los usuarios pueden registrarse ingresando datos como nombre, correo electrónico, y contraseña.
 - La contraseña es protegida con _bcrypt_ para mayor seguridad.
 
+<br>
+
 ## Inicio de Sesión
 
 - Después de registrarse, los usuarios pueden iniciar sesión y acceder a contenido exclusivo.
 - La autenticación se maneja a través de sesiones de Express.
 
+<br>
+
 ## Consulta de la Base de Datos
 
 - Puedes gestionar y consultar los datos del usuario usando **phpMyAdmin** accediendo a `http://localhost:3306`.
 
----
+<br>
+<br>
+<br>
 
 # Contribuciones
 
@@ -214,7 +239,9 @@ Las contribuciones son bienvenidas. Si tienes sugerencias de nuevas funcionalida
 
 5. Abre un _pull request_ para revisión.
 
----
+<br>
+<br>
+<br>
 
 # Licencia
 
