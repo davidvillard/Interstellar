@@ -1,5 +1,43 @@
 ---
 import LayoutRegister from "../layouts/LayoutRegister.astro";
+import {db, User} from "astro:db";
+
+if(Astro.request.method === "POST") {
+  const formData = await Astro.request.formData();
+  const name = formData.get("name");
+  const surname = formData.get("surname");
+  const gender = formData.get("gender");
+  const country = formData.get("country");
+  const birthdate = formData.get("birthdate");
+  const email = formData.get("email");
+  const password = formData.get("password");
+  const phone = formData.get("phone");
+  console.log({name, surname, gender, country, birthdate, email, password, phone});
+
+  if (
+    typeof name === "string" &&  
+    typeof surname === "string" && 
+    typeof gender === "string" && 
+    typeof country === "string" && 
+    typeof birthdate === "string" && 
+    typeof email === "string" && 
+    typeof password === "string" && 
+    typeof phone === "string"
+  ) {
+    await db.insert(User).values({
+      id: 7,
+      name,
+      surname,
+      gender,
+      country,
+      birthdate,
+      email,
+      password,
+      phone
+    });
+  }
+} 
+
 ---
 
 <LayoutRegister title="Registro" description="Regístrate en nuestra web!">
@@ -9,7 +47,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
     >
       ¡Regístrate ahora y únete a nuestra comunidad!
     </h2>
-    <form class="flex flex-col items-center">
+    <form class="flex flex-col items-center" method="post">
       <!-- Primer Bloque -->
       <div class="border-b-[1px] mb-8 w-full px-5 sm:px-10">
         <!-- Nombre y Apellidos -->
@@ -23,6 +61,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
               <input
                 type="text"
                 id="UserName"
+                name="name"
                 placeholder="Nombre de usuario"
                 class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
               />
@@ -41,6 +80,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
               <input
                 type="text"
                 id="UserSurname"
+                name="surname"
                 placeholder="Apellidos"
                 class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
               />
@@ -60,6 +100,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
           >
             <select
               id="UserGender"
+              name="gender"
               class="h-[45px] pl-4 w-full border-none bg-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[7px]"
             >
               <option value="M" class="text-black"> Masculino </option>
@@ -84,6 +125,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
           >
             <select
               id="UserCountry"
+              name="country"
               class="h-[45px] w-full pl-4 border-none bg-transparent focus:border-transparent appearance-none focus:outline-none focus:ring-0 sm:text-[1.1rem] mt-[7px] font-custom"
             >
               <option value="AFG" class="text-black"> Afganist&#225;n </option>
@@ -423,6 +465,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             <input
               type="date"
               id="UserBirthdate"
+              name="birthdate"
               placeholder="Fecha de nacimiento"
               class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
             />
@@ -445,6 +488,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             <input
               type="email"
               id="UserEmail"
+              name="email"
               placeholder="nombre@example.com"
               class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
             />
@@ -464,6 +508,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             <input
               type="password"
               id="UserPassword"
+              name="password"
               placeholder="Password"
               class="peer h-[45px] w-full pl-4 border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
             />
@@ -473,29 +518,10 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             >
           </label>
         </div>
-
-        <!-- Confirmar Contraseña -->
-        <div class="mb-8">
-          <label
-            for="UserPasswordConfirm"
-            class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
-          >
-            <input
-              type="password"
-              id="UserPasswordConfirm"
-              placeholder="Password"
-              class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
-            />
-            <span
-              class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-300 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
-              >Confirmar contraseña</span
-            >
-          </label>
-        </div>
       </div>
 
       <!-- Tercer Bloque -->
-      <div class="border-b-[1px] mb-8 w-full px-5 sm:px-10">
+      <div class="mb-8 w-full px-5 sm:px-10">
         <!-- Telefono -->
         <div class="mb-4">
           <label
@@ -505,6 +531,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             <input
               type="tel"
               id="UserPhone"
+              name="phone"
               placeholder="Número de teléfono"
               class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
             />
@@ -514,102 +541,6 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             >
           </label>
         </div>
-
-        <!-- Comprobacion Numero de Telefono -->
-        <div class="mb-8">
-          <div class="flex items-center pl-7 text-base font-normal">
-            Verificar con:
-            <label
-              class="relative flex cursor-pointer items-center rounded-full ml-6"
-              for="radio-sms"
-              data-ripple-dark="true"
-            >
-              <input
-                type="checkbox"
-                class="before:content[''] custom-checkbox peer pl-4 relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
-                id="radio-sms"
-                name="verification_method"
-                value="SMS"
-              />
-              <div
-                class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3.5 w-3.5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </div>
-            </label>
-            <label
-              for="radio-sms"
-              class="ml-1 text-base leading-5 text-gray-300">SMS</label
-            >
-
-            <label
-              class="relative flex cursor-pointer items-center rounded-full ml-4"
-              for="radio-email"
-              data-ripple-dark="true"
-            >
-              <input
-                type="checkbox"
-                class="before:content[''] custom-checkbox peer pl-4 relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-gray-500 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-blue-500 checked:bg-blue-500 checked:before:bg-blue-500 hover:before:opacity-10"
-                id="radio-email"
-                name="verification_method"
-                value="Correo"
-              />
-              <div
-                class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-3.5 w-3.5"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-width="1"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-              </div>
-            </label>
-            <label
-              for="radio-email"
-              class="ml-1 text-base leading-5 text-gray-300"
-              >Correo Electr&oacute;nico</label
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Avatar -->
-      <div class="mb-4 w-full px-5 sm:px-10">
-        <label
-          for="UserAvatar"
-          class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
-        >
-          <input
-            type="file"
-            id="UserAvatar"
-            placeholder="Avatar"
-            class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[30px]"
-          />
-          <span
-            class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-base text-gray-300 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm"
-            >Avatar</span
-          >
-        </label>
       </div>
 
       <!-- Terminos y condiciones -->
