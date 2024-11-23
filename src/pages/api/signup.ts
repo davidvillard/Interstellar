@@ -1,16 +1,14 @@
 import { lucia } from "../../lib/auth";
 import { generateId } from "lucia";
 import { hash } from "@node-rs/argon2";
-import { db } from "../../lib/db";
-import { SqliteError } from "better-sqlite3";
+import { User } from "../../lib/models"; // Importa el modelo de Mongoose
 
 import type { APIContext } from "astro";
 
 export async function POST(context: APIContext): Promise<Response> {
 	const formData = await context.request.formData();
 	const username = formData.get("username");
-	// username must be between 4 ~ 31 characters, and only consists of lowercase letters, 0-9, -, and _
-	// keep in mind some database (e.g. mysql) are case insensitive
+
 	if (
 		typeof username !== "string" ||
 		username.length < 3 ||
@@ -26,6 +24,7 @@ export async function POST(context: APIContext): Promise<Response> {
 			}
 		);
 	}
+
 	const password = formData.get("password");
 	if (typeof password !== "string" || password.length < 6 || password.length > 255) {
 		return new Response(
@@ -39,37 +38,28 @@ export async function POST(context: APIContext): Promise<Response> {
 	}
 
 	const passwordHash = await hash(password, {
-		// recommended minimum parameters
 		memoryCost: 19456,
 		timeCost: 2,
 		outputLen: 32,
 		parallelism: 1
 	});
-	const userId = generateId(15);
+
+	// Usamos Mongoose para crear el usuario
+	const newUser = new User({
+		_id: generateId(15),
+		username,
+		password_hash: passwordHash
+	});
 
 	try {
-		db.prepare("INSERT INTO user (id, username, password_hash) VALUES(?, ?, ?)").run(
-			userId,
-			username,
-			passwordHash
-		);
+		await newUser.save();
 
-		const session = await lucia.createSession(userId, {});
+		const session = await lucia.createSession(newUser._id, {});
 		const sessionCookie = lucia.createSessionCookie(session.id);
 		context.cookies.set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
 		return new Response();
 	} catch (e) {
-		if (e instanceof SqliteError && e.code === "SQLITE_CONSTRAINT_UNIQUE") {
-			return new Response(
-				JSON.stringify({
-					error: "Username already used"
-				}),
-				{
-					status: 400
-				}
-			);
-		}
 		return new Response(
 			JSON.stringify({
 				error: "An unknown error occurred"
