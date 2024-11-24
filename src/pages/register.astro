@@ -1,42 +1,42 @@
 ---
 import LayoutRegister from "../layouts/LayoutRegister.astro";
-import {db, User} from "astro:db";
+// import {db, User} from "astro:db";
 
-if(Astro.request.method === "POST") {
-  const formData = await Astro.request.formData();
-  const name = formData.get("name");
-  const surname = formData.get("surname");
-  const gender = formData.get("gender");
-  const country = formData.get("country");
-  const birthdate = formData.get("birthdate");
-  const email = formData.get("email");
-  const password = formData.get("password");
-  const phone = formData.get("phone");
-  console.log({name, surname, gender, country, birthdate, email, password, phone});
+// if(Astro.request.method === "POST") {
+//   const formData = await Astro.request.formData();
+//   const name = formData.get("name");
+//   const surname = formData.get("surname");
+//   const gender = formData.get("gender");
+//   const country = formData.get("country");
+//   const birthdate = formData.get("birthdate");
+//   const email = formData.get("email");
+//   const password = formData.get("password");
+//   const phone = formData.get("phone");
+//   console.log({name, surname, gender, country, birthdate, email, password, phone});
 
-  if (
-    typeof name === "string" &&  
-    typeof surname === "string" && 
-    typeof gender === "string" && 
-    typeof country === "string" && 
-    typeof birthdate === "string" && 
-    typeof email === "string" && 
-    typeof password === "string" && 
-    typeof phone === "string"
-  ) {
-    await db.insert(User).values({
-      id: 7,
-      name,
-      surname,
-      gender,
-      country,
-      birthdate,
-      email,
-      password,
-      phone
-    });
-  }
-} 
+//   if (
+//     typeof name === "string" &&  
+//     typeof surname === "string" && 
+//     typeof gender === "string" && 
+//     typeof country === "string" && 
+//     typeof birthdate === "string" && 
+//     typeof email === "string" && 
+//     typeof password === "string" && 
+//     typeof phone === "string"
+//   ) {
+//     await db.insert(User).values({
+//       id: 7,
+//       name,
+//       surname,
+//       gender,
+//       country,
+//       birthdate,
+//       email,
+//       password,
+//       phone
+//     });
+//   }
+// } 
 
 ---
 
@@ -602,7 +602,7 @@ if(Astro.request.method === "POST") {
       </div>
     </form>
   </div>
-  <script type="module" src="/src/services/register.js"></script>
+
 </LayoutRegister>
 
 <script>

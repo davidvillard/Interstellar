@@ -1,44 +1,102 @@
 ---
-import LayoutLogin from "../layouts/LayoutLogin.astro"
+import { SignIn, SignOut } from "auth-astro/components";
+import LayoutLogin from "../layouts/LayoutLogin.astro";
+import { getSession } from "auth-astro/server";
+
+const session = await getSession(Astro.request);
+console.log("Session:", session);
+
+if (!session) {
+  // Redirige a la página de login si no hay sesión
+  return Astro.redirect('/login');
+}
 ---
 
-<LayoutLogin title="Mi cuenta" description="Ajustes de tu cuenta">
-    <div class="container mx-auto p-4">
-        <h2 class="text-2xl font-semibold mb-4">Bienvenido a tu cuenta</h2>
-        <p class="mb-6">Gestiona tus ajustes personales y preferencias aquí.</p>
-        
+<LayoutLogin title="Login" description="Logueate en nuestra web!">
+  <div class="flex items-center justify-center min-h-[80vh]">
+  <div class="w-full max-w-lg p-5 mx-auto ">
+    <div class="flex flex-col items-center space-y-4">
+      <div class="container mx-auto p-4">
+        <h2
+          class="-skew-x-6 mb-8 text-center text-white text-4xl sm:text-5xl font-extrabold"
+        >
+          ¡Bienvenido a tu cuenta!
+        </h2>
+        <p class="text-lg mb-12 text-center">
+          Gestiona tus ajustes <i>personales</i> y <i>preferencias</i> aquí.
+        </p>
+
         <section class="mb-8">
-          <h3 class="text-xl font-medium mb-2">Perfil de usuario</h3>
+          <h3 class="text-xl font-medium mb-4">Perfil de usuario</h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
-              <label for="name" class="block text-sm font-medium mb-1">Nombre</label>
-              <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded-md" value="Juan Pérez" />
+              <label for="name" class="block text-sm font-medium mb-1">
+                Nombre
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="w-full p-2 border border-gray-300 rounded-md"
+                placeholder={session.user?.name}
+              />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium mb-1">Correo electrónico</label>
-              <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded-md" value="juan@ejemplo.com" />
+              <label for="email" class="block text-sm font-medium mb-1">
+                Correo electrónico
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="w-full p-2 border border-gray-300 rounded-md"
+                placeholder={session.user?.email}
+              />
             </div>
           </div>
         </section>
-    
-        <section class="mb-8">
-          <h3 class="text-xl font-medium mb-2">Contraseña</h3>
-          <div>
-            <label for="password" class="block text-sm font-medium mb-1">Nueva contraseña</label>
-            <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Introduce una nueva contraseña" />
-          </div>
-          <div class="mt-4">
-            <label for="confirm-password" class="block text-sm font-medium mb-1">Confirmar nueva contraseña</label>
-            <input type="password" id="confirm-password" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Confirma tu nueva contraseña" />
-          </div>
-        </section>
-    
-        <section class="mb-8">
-          <button class="w-full sm:w-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-            Guardar cambios
-          </button>
-        </section>
+
+        {
+          /* <section class="mb-8">
+                <h3 class="text-xl font-medium mb-2">Contraseña</h3>
+                <div>
+                  <label for="password" class="block text-sm font-medium mb-1">
+                    Nueva contraseña
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    class="w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Introduce una nueva contraseña"
+                  />
+                </div>
+                <div class="mt-4">
+                  <label
+                    for="confirm-password"
+                    class="block text-sm font-medium mb-1"
+                  >
+                    Confirmar nueva contraseña
+                  </label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    class="w-full p-2 border border-gray-300 rounded-md"
+                    placeholder="Confirma tu nueva contraseña"
+                  />
+                </div>
+              </section>
+
+              <section class="mb-8">
+                <button class="w-full sm:w-auto bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
+                  Guardar cambios
+                </button>
+              </section> */
+        }
+
+        <SignOut
+          class="w-full px-4 py-2 mb-4 bg-blue-600 rounded-md font-semibold capitalize text-white hover:bg-blue-700 active:bg-blue-700 focus:outline-none focus:border-blue-700 focus:ring focus:ring-blue-200 transition"
+          >Cerrar Sesion</SignOut
+        >
       </div>
+    </div>
+  </div>
+</div>
 </LayoutLogin>
-
-
