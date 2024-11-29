@@ -4,13 +4,8 @@ const User = defineTable({
   columns: {
     id: column.number({primaryKey: true}),
     name: column.text(),
-    surname: column.text(),
-    gender: column.text(),
-    country: column.text(),
-    birthdate: column.text(),
     email: column.text({unique: true}),
-    password: column.text(),
-    phone: column.text(),
+    password: column.text({optional: true}),
     created_at: column.date({ default: NOW }),
     updated_at: column.date({ default: NOW, onUpdate: NOW })
 
