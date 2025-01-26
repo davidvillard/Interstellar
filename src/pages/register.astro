@@ -1,50 +1,56 @@
 ---
 import LayoutRegister from "../layouts/LayoutRegister.astro";
-// import {db, User} from "astro:db";
+import { getSession } from "auth-astro/server";
+import { db, UserRegistration, eq } from "astro:db";
 
-// if(Astro.request.method === "POST") {
-//   const formData = await Astro.request.formData();
-//   const name = formData.get("name");
-//   const surname = formData.get("surname");
-//   const gender = formData.get("gender");
-//   const country = formData.get("country");
-//   const birthdate = formData.get("birthdate");
-//   const email = formData.get("email");
-//   const password = formData.get("password");
-//   const phone = formData.get("phone");
-//   console.log({name, surname, gender, country, birthdate, email, password, phone});
+const session = await getSession(Astro.request);
+console.log("Session:", session);
 
-//   if (
-//     typeof name === "string" &&  
-//     typeof surname === "string" && 
-//     typeof gender === "string" && 
-//     typeof country === "string" && 
-//     typeof birthdate === "string" && 
-//     typeof email === "string" && 
-//     typeof password === "string" && 
-//     typeof phone === "string"
-//   ) {
-//     await db.insert(User).values({
-//       id: 7,
-//       name,
-//       surname,
-//       gender,
-//       country,
-//       birthdate,
-//       email,
-//       password,
-//       phone
-//     });
-//   }
-// } 
+if (Astro.request.method === "POST") {
+  const formData = await Astro.request.formData();
+  const email = formData.get("email")?.toString();
+  let existingUser = [];
+  if (email) {
+    existingUser = await db
+      .select()
+      .from(UserRegistration)
+      .where(eq(UserRegistration.email, email))
+      .limit(1);
+  }
 
+  if (existingUser.length === 0) {
+    const name = formData.get("name")?.toString();
+    const gender = formData.get("gender")?.toString();
+    const country = formData.get("country")?.toString();
+    const birthday = formData.get("birthday")
+      ? new Date(formData.get("birthday").toString())
+      : null;
+    const email = formData.get("email")?.toString();
+    const password = formData.get("password")?.toString();
+    const phone = formData.get("phone")?.toString();
+
+    await db.insert(UserRegistration).values([
+      {
+        name,
+        gender,
+        country,
+        birthday,
+        email,
+        password,
+        phone,
+      },
+    ]);
+    console.log("Usuario registrado correctamente");
+  } else {
+    // Mandar un mensaje de que el usuario ya está registrado
+    console.log("El usuario ya está registrado");
+  }
+}
 ---
 
 <LayoutRegister title="Registro" description="Regístrate en nuestra web!">
   <div class="w-full sm:max-w-2xl p-5 mt-10 mb-20 mx-auto">
-    <h2
-      class="mb-16 text-center text-4xl sm:text-5xl font-extrabold"
-    >
+    <h2 class="mb-16 text-center text-4xl sm:text-5xl font-extrabold">
       ¡Regístrate ahora y únete a nuestra comunidad!
     </h2>
     <form class="flex flex-col items-center" method="post">
@@ -52,44 +58,22 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
       <div class="border-b-[1px] mb-8 w-full px-5 sm:px-10">
         <!-- Nombre y Apellidos -->
         <div class="flex flex-col sm:flex-row sm:space-x-4 mb-4">
-          <!-- Nombre -->
-          <div class="mb-4 sm:mb-0 w-full sm:w-1/2">
-            <label
-              for="UserName"
-              class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+          <label
+            for="UserName"
+            class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+          >
+            <input
+              type="text"
+              id="UserName"
+              name="name"
+              placeholder="Nombre de usuario"
+              class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
+            />
+            <span
+              class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-300 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
+              >Nombre Completo</span
             >
-              <input
-                type="text"
-                id="UserName"
-                name="name"
-                placeholder="Nombre de usuario"
-                class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
-              />
-              <span
-                class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-300 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
-                >Nombre</span
-              >
-            </label>
-          </div>
-          <!-- Apellidos -->
-          <div class="w-full sm:w-1/2">
-            <label
-              for="UserSurname"
-              class="relative block overflow-hidden w-full rounded-xl border border-[#86868b] px-3 pt-3 shadow-sm focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
-            >
-              <input
-                type="text"
-                id="UserSurname"
-                name="surname"
-                placeholder="Apellidos"
-                class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
-              />
-              <span
-                class="absolute pl-4 start-3 top-4 -translate-y-1/2 text-sm text-gray-300 font-custom transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-lg peer-focus:top-4 peer-focus:text-sm cursor-text"
-                >Apellidos</span
-              >
-            </label>
-          </div>
+          </label>
         </div>
 
         <!-- Genero -->
@@ -465,7 +449,7 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
             <input
               type="date"
               id="UserBirthdate"
-              name="birthdate"
+              name="birthday"
               placeholder="Fecha de nacimiento"
               class="peer h-[45px] pl-4 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-[1.1rem] font-custom mt-[3px]"
             />
@@ -602,7 +586,6 @@ import LayoutRegister from "../layouts/LayoutRegister.astro";
       </div>
     </form>
   </div>
-
 </LayoutRegister>
 
 <script>
