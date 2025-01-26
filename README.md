@@ -1,6 +1,6 @@
 # Interstellar - Fan Page Project
 
-Bienvenido al repositorio de **Interstellar**, una página web creada como tributo a la película _Interstellar_. Este proyecto está construido en **Astro** y utiliza diversas tecnologías en su stack, incluyendo **JavaScript**, **phpMyAdmin** para la gestión de bases de datos, **Express** para el backend, y **Tailwind CSS** para el diseño y estilo.
+Bienvenido al repositorio de **Interstellar**, una página web creada como tributo a la película _Interstellar_. Este proyecto está construido en **Astro** y utiliza diversas tecnologías en su stack, incluyendo **JavaScript**, **phpMyAdmin** para la gestión de bases de datos, **AstroAuth** para la gestion de login y register, y **Tailwind CSS** para el diseño y estilo.
 
 <br>
 
@@ -27,7 +27,7 @@ Bienvenido al repositorio de **Interstellar**, una página web creada como tribu
 
 Este proyecto está pensado como una página de fans de la película _Interstellar_, con secciones sobre la película, el director, los actores, la banda sonora, y más. La página permite a los usuarios registrarse, iniciar sesión y acceder a contenido exclusivo.
 
-El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y Express se encarga de manejar las solicitudes y la lógica de autenticación.
+El backend permite autenticación básica, mientras que el frontend está diseñado para ser visualmente atractivo, gracias a Tailwind CSS y componentes de Astro. La base de datos se gestiona a través de phpMyAdmin, y AstroAuth se encarga de manejar el inicio de sesiçon y el registro.
 
 <br>
 <br>
@@ -36,10 +36,9 @@ El backend permite autenticación básica, mientras que el frontend está diseñ
 
 - **Astro**: Framework principal para la generación del frontend.
 - **JavaScript**: Utilizado en el frontend y en el backend para manejar interactividad y lógica.
-- **Express**: Framework de Node.js para el backend, utilizado principalmente para autenticación (login y registro).
+- **AstroAuth**: Biblioteca de autenticación utilizada en Astro para implementar login y registro de manera eficiente, incluyendo soporte para múltiples proveedores de autenticación como Google.
 - **phpMyAdmin**: Herramienta de administración de la base de datos.
 - **Tailwind CSS**: Framework de CSS utilizado para el diseño responsive.
-- **Axios**: Para manejar solicitudes HTTP en el frontend y comunicarlo con el backend.
 - **Docker**: Para la configuración y despliegue del proyecto en entornos aislados.
 
 <br>
@@ -103,13 +102,6 @@ Configura Docker para iniciar phpMyAdmin y MySQL:
 docker-compose up -d
 ```
 
-Inicia el backend con Express:
-
-```bash
-cd backend
-node app.js
-```
-
 Ejecuta Astro en modo de desarrollo:
 
 ```bash
@@ -129,7 +121,7 @@ Accede a la aplicación en `http://localhost:4321`.
 
 ## Funcionalidades del Proyecto
 
-- **Registro e Inicio de Sesión**: Los usuarios pueden registrarse e iniciar sesión. La autenticación se maneja en el backend usando **Express** y **Express-Session**.
+- **Registro e Inicio de Sesión**: Los usuarios pueden registrarse e iniciar sesión. La autenticación se maneja en el backend usando **AstroAuth**.
 - **Base de Datos**: Las credenciales de los usuarios y otros datos se almacenan en una base de datos MySQL gestionada a través de **phpMyAdmin**.
 - **Frontend**: La página es completamente responsive gracias a **Tailwind CSS**. La interfaz está diseñada para ser visualmente atractiva y fácil de usar.
 - **About**: Una sección que proporciona una descripción general de la película _Interstellar_, incluyendo contexto y detalles de la producción.
@@ -157,8 +149,8 @@ Accede a la aplicación en `http://localhost:4321`.
 
 ## Inicio de Sesión
 
-- Después de registrarse, los usuarios pueden iniciar sesión y acceder a contenido exclusivo.
-- La autenticación se maneja a través de sesiones de Express.
+- Después de registrarse, los usuarios pueden iniciar sesión y acceder a contenido exclusivo. (Implementación)
+- La autenticación se maneja a través de AstroAuth
 
 <br>
 
